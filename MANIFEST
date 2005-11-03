@@ -1,0 +1,11 @@
+Build.PL
+Changes
+MANIFEST
+META.yml # Will be created by "./Build dist"
+README   # Will be created by "./Build dist"
+lib/Template/Plugin/Subst.pm
+t/00-load.t
+t/01-filter.t
+t/02-vmethod.t
+t/pod.t
+SIGNATURE    Added here by Module::Build
