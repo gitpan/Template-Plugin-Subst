@@ -1,6 +1,6 @@
 ---
 name: Template-Plugin-Subst
-version: 0.01
+version: 0.02
 author:
   - Nik Clayton <nik@FreeBSD.org>
 abstract: s/// functionality for Template Toolkit templates
@@ -11,5 +11,5 @@ requires:
 provides:
   Template::Plugin::Subst:
     file: lib/Template/Plugin/Subst.pm
-    version: 0.01
+    version: 0.02
 generated_by: Module::Build version 0.2611

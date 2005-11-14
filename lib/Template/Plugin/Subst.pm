@@ -40,11 +40,11 @@ Template::Plugin::Subst - s/// functionality for Template Toolkit templates
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub init {
   my $self = shift;
@@ -61,7 +61,7 @@ sub filter {
 
   my $pattern     = $config->{pattern};
   my $replacement = $config->{replacement};
-  my $global      = $config->{global} // 1;
+  my $global      = defined $config->{global} ? $config->{global} : 1;
 
 #  warn "pattern: $pattern, replacement: $replacement\n";
   $text = subst($text, $pattern, $replacement, $global);
@@ -72,7 +72,7 @@ sub filter {
 sub subst {
   my($text, $pattern, $replacement, $global) = @_;
 
-  $global = $global // 1;
+  $global = defined $global ? $global : 1;
 
 #  warn "-> subst() ('$pattern', '$replacement')\n";
   if($text !~ m/$pattern/) {
